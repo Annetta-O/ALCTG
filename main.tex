@@ -1,0 +1,38 @@
+% Настройки документа
+\documentclass[12pt, oneside]{book}
+
+% Настройки языка
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel} 
+
+% Настройка глубины "Оглавления"
+\setcounter{tocdepth}{2}
+
+% Заглавие Файла
+\author{Дима Гущин}
+\title{Топология и ее приложения}
+\date{\today}
+
+% Файл с настройками
+\usepackage{textbook}
+
+\begin{document}
+	\input{title_and_toc}
+	
+	\input{intro}	
+	
+	\input{chap_set}	
+	
+	\chapter{Булева алгебра} 
+		\section{Булевы функции}
+		\input{1/theory}
+		\input{1/seminar}
+		\input{1/hw}
+		\input{1/minicw}
+		
+		
+	\titlespacing*{\chapter}{0pt}{0pt}{40pt}
+	\bibliographystyle{utf8gost705u} %% стилевой файл
+	\bibliography{biblio}
+\end{document}

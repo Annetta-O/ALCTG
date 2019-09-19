@@ -1,0 +1,33 @@
+	% Title
+	\begin{titlepage}
+		\noindent
+		\titlefont ALCTG \par
+		\epigraph{\textit{The Scientist must set in order. 
+		Science is built up with facts, as a house is with stones. 
+		But a collection of facts is no more a science 
+		than a heap of stones is a house.}}%
+		{\textit{Science and Hypothesis}\\ Henri Poincare}
+		\null\vfill
+		\vspace*{1cm}
+		\noindent
+		\hfill
+		\begin{minipage}{0.35\linewidth}
+    		\begin{flushright}
+        		\selectlanguage{russian} Автор --- 
+    			\href{https://vk.com/gushchin_dima}{Дима Гущин}
+    		\end{flushright}
+		\end{minipage}
+		%
+		\begin{minipage}{0.02\linewidth}
+    		\rule{1pt}{50pt}
+		\end{minipage}
+	\end{titlepage}
+	
+	% Table Of Content
+	{
+  		\hypersetup{hidelinks}
+  		\addtocontents{toc}{\protect\pagestyle{empty}}
+		\renewcommand\contentsname{Table of contents}
+  		\tableofcontents
+		\clearpage
+	}

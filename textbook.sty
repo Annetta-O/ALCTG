@@ -1,0 +1,399 @@
+
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+% Subsection
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+
+% Subsection
+\usepackage{xhfill}
+\definecolor{palatinateblue}{rgb}{0.15, 0.23, 0.89}
+\newcommand*{\mysubsection}[2][.4pt]{
+  \addtocounter{subsection}{1}
+  \bigskip\noindent\leavevmode\hfill~{\bfseries\large\color{palatinateblue}\fontfamily{antt}\selectfont\ #2}~\hfill\mbox{}\nobreak\par\bigskip
+  \addcontentsline{toc}{subsection}{\protect\numberline{\thesubsection} #2}
+}
+
+% Spacing after subsection
+\usepackage{titlesec}
+\titlespacing*{\subsection}{0pt}{3.2ex}{.3ex}
+
+
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+% Title
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+
+%Title
+\usepackage{amsmath}
+\usepackage{tikz}
+
+%Epigraph
+\usepackage{epigraph}
+\setlength\epigraphwidth{.6\textwidth}
+\setlength\epigraphrule{0pt}
+
+\usepackage{lipsum}
+
+\renewcommand\epigraphflush{flushright}
+\renewcommand\epigraphsize{\normalsize}
+\setlength\epigraphwidth{0.7\textwidth}
+
+\definecolor{titlepagecolor}{cmyk}{1,.60,0,.40}
+
+\DeclareFixedFont{\titlefont}{T1}{ppl}{b}{it}{0.5in}
+
+\makeatletter                       
+\def\printauthor{%                  
+    {\large \@author}}              
+\makeatother
+
+% The following code is borrowed from: https://tex.stackexchange.com/a/86310/10898
+
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+% Table of Content
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+
+% Table Of Content
+\usepackage{tikz}
+\usepackage{titletoc}
+\usepackage{titlesec}
+\usepackage{hyperref}
+
+%
+\definecolor{doc}{RGB}{0,60,110}
+\definecolor{myblueii}{rgb}{1.0, 0.22, 0.0}
+\definecolor{sec}{rgb}{0.5, 0.09, 0.09}
+\definecolor{coquelicot}{rgb}{1.0, 0.22, 0.0}
+%~~~~~~~~~~~~~~~~~~~~~Fancy ToC~~~~~~~~~~~~~~~~~~~~~~
+\contentsmargin{0cm}
+\titlecontents{chapter}[0pc]
+{\addvspace{30pt}%
+\begin{tikzpicture}[remember picture, overlay]%
+\draw[fill=myblueii,draw=myblueii, rounded corners] (-2,-.1) rectangle (1.85,.5);%
+\pgftext[left,x=-0.7cm,y=0.2cm]{\color{white}\Large \fontfamily{antt}\chaptertitlename\ \thecontentslabel};%
+\end{tikzpicture}\color{myblueii}\large\bfseries}%
+{\hspace*{60pt}}
+{}
+{\hspace*{6pt}\titlerule\hspace*{6pt}\large\bfseries \thecontentspage
+\begin{tikzpicture}[remember picture, overlay]
+\draw[fill=doc!25,draw=myblueii, rounded corners=0pt] (2pt,0) rectangle (6,0.1pt);
+\end{tikzpicture}}%
+
+\titlecontents{section}[2.4pc]
+{\addvspace{0.4cm}}
+{\contentslabel[\thecontentslabel]{2.4pc}}
+{}
+{\hfill\small \thecontentspage}
+[]
+
+\titlecontents{subsection}[5.8pc]
+{\addvspace{2.4pt}\color{sec}}
+{\contentslabel[\thecontentslabel]{3pc}}
+{}
+{\dotfill\small\thecontentspage}
+[]
+    
+\makeatletter
+\renewcommand{\tableofcontents}{%
+\chapter*{%
+\vspace*{-20\p@}%
+\begin{tikzpicture}[remember picture, overlay]%
+\pgftext[right,x=15cm,y=0.2cm]{\color{myblueii}\Huge\fontfamily{antt}\contentsname};%
+\draw[fill=myblueii,draw=myblueii, rounded corners=15pt] (13,-.75) rectangle (20,1);%
+\clip (13,-.75) rectangle (20,1);
+\pgftext[right,x=15cm,y=0.2cm]{\color{white}\Huge \fontfamily{antt}\contentsname};%
+\end{tikzpicture}}%
+\pagestyle{empty}
+\@starttoc{toc}}
+\makeatother
+
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+% Background
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+%
+%\usepackage[pages=some]{background}
+%\usepackage{graphicx}
+%\usepackage{eso-pic}
+%\usepackage{transparent}
+%\AddToShipoutPictureBG{{\transparent{0.4}
+%  \begin{tikzpicture}[remember picture,overlay]
+%\node [xshift=0cm, yshift=0cm] at (current page.center) 
+%    {\includegraphics[width=\paperwidth]{pics/back_topology}};
+%\end{tikzpicture}}}
+%\backgroundsetup{
+%scale=1,
+%color=black,
+%opacity=0.4,
+%angle=0,
+%contents={}%
+%}
+
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+% Footers and headers
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+
+%Footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\makeatletter
+\let\runauthor\@author
+\let\runtitle\@title
+\makeatother
+\fancyfoot[L]{\runtitle, \; \runauthor}
+\fancyfoot[C]{}
+\fancyfoot[R]{\thepage}
+\fancyhead[C]{\leftmark}
+\fancyhead[L]{}
+\fancyhead[R]{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\setlength{\headheight}{15pt}
+
+% Length to control the \fancyheadoffset and the calculation of \headline
+% simultaneously
+\newlength\FHoffset
+\setlength\FHoffset{1cm}
+
+\addtolength\headwidth{2\FHoffset}
+
+\fancyheadoffset{\FHoffset}
+
+% these lengths will control the headrule trimming to the left and right 
+\newlength\FHleft
+\newlength\FHright
+
+% here the trimmings are controlled by the user
+\setlength\FHleft{1cm}
+\setlength\FHright{0cm}
+
+% The new definition of headrule that will take into acount the trimming(s)
+\newbox\FHline
+\setbox\FHline=\hbox{\hsize=\paperwidth%
+  \hspace*{\FHleft}%
+  \rule{\dimexpr\headwidth-\FHleft-\FHright\relax}{\headrulewidth}\hspace*{\FHright}%
+}
+
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+% Theorems and environments
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+
+% Packages
+\usepackage{xcolor}
+\usepackage{enumitem}
+
+%Custom style
+\usepackage{amsthm}
+\theoremstyle{definition}
+
+% Theorems
+\newtheorem{example}{Пример}[section]
+\newtheorem{testquestion}[example]{Контрольный вопрос}
+\newtheorem{statement}[example]{Утверждение}
+\newtheorem{lemma}{Лемма}
+\newtheorem{cons}[example]{Следствие}
+\newtheorem{exercise}[example]{Задача}
+\newtheorem*{remark}{Замечание}
+\newtheorem{practice}[example]{Практическое упражнение}
+
+\usepackage[many]{tcolorbox}
+
+\definecolor{bronze}{rgb}{0.8, 0.5, 0.2}
+\definecolor{bisque}{rgb}{1.0, 0.89, 0.77}
+\newtheorem{theorem}[example]{Теорема}
+\tcolorboxenvironment{theorem}{
+  enhanced,
+  borderline={2.8pt}{0pt}{bronze!50},
+%  borderline={0.4pt}{2pt}{black},
+  boxrule=0.4pt,
+  colback=bisque,
+  coltitle=black,
+  sharp corners
+}
+
+\newtheorem{definition}[example]{Определение}
+\tcolorboxenvironment{definition}{
+  enhanced,
+  borderline={0.8pt}{0pt}{cyan!70},
+  borderline={0.4pt}{2pt}{black},
+  boxrule=0.4pt,
+  colback=green!70!white!30,
+  coltitle=black,
+  sharp corners
+}
+
+\definecolor{columbiablue}{rgb}{0.61, 0.87, 1.0}
+\newtheorem{axiom}[example]{Аксиома}
+\tcolorboxenvironment{axiom}{
+  enhanced,
+  borderline={0.8pt}{0pt}{blue!80},
+  borderline={0.4pt}{2pt}{black},
+  boxrule=0.4pt,
+  colback=columbiablue,
+  coltitle=black,
+  sharp corners
+}
+
+% Proof
+\usepackage{arydshln}
+\usepackage{mdframed}
+\mdfsetup{splitbottomskip=0.8cm,splittopskip=0cm,
+	innerrightmargin=0.3cm,innertopmargin=0.2cm,%
+	innerlinewidth=10pt,outerlinewidth=10pt,
+	middlelinewidth=10pt,linewidth=2pt,
+	linecolor=green!50!black,middlelinecolor=gray,
+	topline=false,bottomline=false}
+\renewenvironment{proof}{\begin{mdframed}
+	\emph{Доказательство. }}{\end{mdframed}\vspace{0.1cm}\par}
+	
+% Myitemize
+\renewcommand{\arraystretch}{0}
+\newenvironment{myitemize}{\begin{tabular}{||p{14cm}}
+\begin{itemize}[label=$\dashrightarrow$,noitemsep,topsep=0pt]}{\end{itemize}\end{tabular}}
+
+% Reference to theorems
+\newcommand{\mref}[1]{{\color{palatinateblue}(\ref{#1})}}
+
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+% Math
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+
+% Packages
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{a4wide}
+\usepackage{etoolbox}
+\usepackage{esvect}
+\usepackage[all,cmtip]{xy} % Commutative diagrams
+
+% Equal with def above
+\newcommand\myeq{\mathrel{\overset{\makebox[0pt]{\mbox{\normalfont\tiny def}}}{=}}}
+
+
+% Abbr
+\def\BR{\mathbb{R}}
+\def\BN{\mathbb{N}}
+\def\BZ{\mathbb{Z}}
+\def\BQ{\mathbb{Q}}
+\def\BX{\mathbb{X}}
+\def\BY{\mathbb{Y}}
+\def\BC{\mathbb{C}}
+\def\BS{\mathbb{S}}
+\def\BT{\mathbb{T}}
+\def\BK{\mathbb{K}}
+\def\BM{\mathbb{M}}
+\def\BP{\mathbb{P}}
+\def\BB{\mathbb{B}}
+\def\BV{\mathbb{V}}
+\def\CC{\mathcal{C}}
+\def\CU{\mathcal{U}}
+
+\def\RP{\BR P}
+\def\CP{\BC\BP}
+
+\def\FB{\mathfrak{B}}
+
+\def\h{{\rotatebox[origin=c]{180}{$\Lsh$}}}
+
+\def\bsq{\subseteq}
+\def\ssim{{\displaystyle \sim}}
+
+\def\diam{\operatorname{diam}}
+\def\const{\operatorname{const}}
+\def\Int{\operatorname{Int}}
+\def\Cl{\operatorname{Cl}}
+\def\Fr{\operatorname{Fr}}
+\def\id{\operatorname{id}}
+\def\ind{\operatorname{ind}}
+\def\sk{\operatorname{sk}}
+\def\Pr{\operatorname{Pr}}
+\def\Im{\operatorname{Im}}
+\def\Ker{\operatorname{Ker}}
+\def\Tors{\operatorname{Tors}}
+\def\supp{\operatorname{supp}}
+
+\newcommand{\TopCl}[1]{[#1]_{\text{топ}}}
+\newcommand{\SeqCl}[1]{[#1]_{\text{секв}}}
+
+\def\v{\mathbf{v}}
+\def\es{\varnothing}
+
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+% Fonts, text
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+
+% Commands
+\usetikzlibrary{patterns}
+\def\mybox{
+\begin{tikzpicture}
+    \pattern[pattern=north east lines, pattern color=orange] 
+    (0,0)--(0,0.1)--(0.1,0.1)--(0.1,0)--cycle;
+    \pattern[pattern=north east lines, pattern color=orange] 
+    (0,0.2)--(0,0.3)--(0.1,0.3)--(0.1,0.2)--cycle;
+\end{tikzpicture}}
+
+\usepackage[normalem]{ulem} % uline
+\makeatletter
+\newcommand\colordashline[1][orange!70]{\bgroup \markoverwith{\lower3.5\p@\hbox{\sixly \textcolor{#1}{\char58}}}\ULon}
+\font\sixly=lasy6
+\makeatother
+
+\newcommand{\mdef}[1]{\emph{\colordashline{#1}}}
+\newcommand{\engmdef}[1]{англ. \emph{#1}}
+\newcommand{\frmdef}[1]{фран. \emph{#1}}
+
+
+%Cross letter
+\usepackage[makeroom]{cancel}
+\usepackage[normalem]{ulem}
+
+%Font
+\usepackage{libertine}
+
+% Let, breaking page, pull text to the bottom of the page 
+\flushbottom
+
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+% Section
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+
+\usepackage{indentfirst} % делает отступ после section
+
+% Section 
+\titleformat{\section}{\newpage\normalfont\Large\bfseries\filcenter}{
+	\S \!\ \thesection}{1em}{\phantomsection}
+
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+% Others
+%---------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
+
+%Multicolon
+\usepackage{paracol}
+
+% To remove warnings: add in subsections that are difficult 
+\def\zvezda{\texorpdfstring{$^*$}{}}
+
+% To remove warnings
+\newcommand{\sectionbreak}{\phantomsection}
+
+
+% Url color
+\definecolor{fashionfuchsia}{rgb}{0.96, 0.0, 0.63}
