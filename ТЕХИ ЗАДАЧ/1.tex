@@ -1,0 +1,167 @@
+\documentclass[12pt,a5paper,fleqn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb, amsmath, multicol}
+\usepackage[russian]{babel}
+\usepackage{graphicx}
+\usepackage[shortcuts,cyremdash]{extdash}
+\usepackage{wrapfig}
+\usepackage{floatflt}
+\usepackage{lipsum}
+\usepackage{concmath}
+\usepackage{euler}
+\usepackage{libertine}
+
+\oddsidemargin=-15.4mm
+\textwidth=127mm
+\headheight=-32.4mm
+\textheight=277mm
+\tolerance=100
+\parindent=0pt
+\parskip=8pt
+\pagestyle{empty}
+\usepackage[normalem]{ulem} % uline
+\usepackage{mdframed}
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{Def}{Def.}
+\newtheorem{Ex}{Ex.}
+
+
+\flushbottom
+
+\begin{document}
+\begin{center}
+	{\bf \Large Задание на первую неделю. \\ \normalsize Алгебра логики: введение}
+\end{center}
+\vspace{0.6cm}
+
+%
+%\begin{mdframed}
+%\scriptsize
+%\begin{Def}
+%	\uwave{Булева функция}~---~это отображение $f\colon B_2^n \to B_2$.
+%\end{Def}
+%\begin{Def}
+%	\uwave{Фиктивная переменная функции $f$}~---~это переменная $x_i$ такая,
+%	что $$f(x_1, x_2, \ldots, x_{i-1}, 1, x_{i+1}, \ldots, x_n)=
+%	f(x_1, x_2, \ldots, x_{i-1}, 0, x_{i+1}, \ldots, x_n)$$ для любых наборов
+%	переменных $x_1, x_2, \ldots, x_{i-1}, x_{i+1}, \ldots, x_n$.
+%\end{Def}
+%\end{mdframed}
+
+\begin{Ex}
+	$x,y,z$~---~целые числа, для которых истинно высказывание
+$$
+	\neg(x=y)\wedge ((y<x)\to(2z>x))\wedge((x<y)\to(x>2z))
+$$
+	Чему равно $x$, если $z=7,y=16$?
+\end{Ex}
+
+\begin{Ex}
+	Постройте таблицу истинности для функции
+$$
+	f(x_1, x_2, x_3) = (x_1 \vee x_2) \downarrow (x_2\to x_3)
+$$
+	
+	и укажите, какие у нее фиктивные переменные, а какие существенные.
+\end{Ex}
+
+\begin{Ex}
+	Докажите, что
+$$
+	1 \oplus x_1 \oplus x_2 = (x_1\to x_2)\wedge(x_2\to x_1).
+$$
+\end{Ex}
+
+\begin{Ex}
+	Докажите формулу
+$$
+	\bigvee_{i,j; i\neq j} x_i \oplus x_j =(x_1\vee x_2\vee\ldots\vee x_n)
+	\wedge (\neg x_1\vee\neg x_2\vee\ldots\vee \neg x_n)
+$$
+\end{Ex}
+
+\begin{Ex}
+	Постройте таблицу истинности для $f$ и выразите ее через операции
+	$\vee, \wedge, \neg$, если
+$$
+	f = x_1 \oplus x_2 \oplus x_3 \oplus x_1x_2 \oplus x_1x_3
+	\oplus x_2x_3 \oplus x_1x_2x_3.
+$$
+\end{Ex}
+
+\textbf{Бонусная задача.} Найдите асимптотическую оценку количества ,булевых 
+функций от $n$ переменных, которые зависят от всех своих аргументов существенно. 
+Иначе говоря, надо придумать такие верхнюю и нижнюю оценки на это количество, 
+чтобы их отношение стремилось к $1$ при $n\to\infty$.
+
+\newpage
+
+\setcounter{Ex}{0}
+
+\begin{center}
+	{\bf \Large Задание на первую неделю. \\ \normalsize Алгебра логики: введение}
+\end{center}
+\vspace{0.6cm}
+
+%
+%\begin{mdframed}
+%\scriptsize
+%\begin{Def}
+%	\uwave{Булева функция}~---~это отображение $f\colon B_2^n \to B_2$.
+%\end{Def}
+%\begin{Def}
+%	\uwave{Фиктивная переменная функции $f$}~---~это переменная $x_i$ такая,
+%	что $$f(x_1, x_2, \ldots, x_{i-1}, 1, x_{i+1}, \ldots, x_n)=
+%	f(x_1, x_2, \ldots, x_{i-1}, 0, x_{i+1}, \ldots, x_n)$$ для любых наборов
+%	переменных $x_1, x_2, \ldots, x_{i-1}, x_{i+1}, \ldots, x_n$.
+%\end{Def}
+%\end{mdframed}
+
+\begin{Ex}
+	$x,y,z$~---~целые числа, для которых истинно высказывание
+$$
+	\neg(x=y)\wedge ((y<x)\to(2z>x))\wedge((x<y)\to(x>2z))
+$$
+	Чему равно $x$, если $z=7,y=16$?
+\end{Ex}
+
+\begin{Ex}
+	Постройте таблицу истинности для функции
+$$
+	f(x_1, x_2, x_3) = (x_1 \vee x_2) \downarrow (x_2\to x_3)
+$$
+	
+	и укажите, какие у нее фиктивные переменные, а какие существенные.
+\end{Ex}
+
+\begin{Ex}
+	Докажите, что
+$$
+	1 \oplus x_1 \oplus x_2 = (x_1\to x_2)\wedge(x_2\to x_1).
+$$
+\end{Ex}
+
+\begin{Ex}
+	Докажите формулу
+$$
+	\bigvee_{i,j; i\neq j} x_i \oplus x_j =(x_1\vee x_2\vee\ldots\vee x_n)
+	\wedge (\neg x_1\vee\neg x_2\vee\ldots\vee \neg x_n)
+$$
+\end{Ex}
+
+\begin{Ex}
+	Постройте таблицу истинности для $f$ и выразите ее через операции
+	$\vee, \wedge, \neg$, если
+$$
+	f = x_1 \oplus x_2 \oplus x_3 \oplus x_1x_2 \oplus x_1x_3
+	\oplus x_2x_3 \oplus x_1x_2x_3.
+$$
+\end{Ex}
+
+\textbf{Бонусная задача.} Найдите асимптотическую оценку количества ,булевых 
+функций от $n$ переменных, которые зависят от всех своих аргументов существенно. 
+Иначе говоря, надо придумать такие верхнюю и нижнюю оценки на это количество, 
+чтобы их отношение стремилось к $1$ при $n\to\infty$.
+
+\end{document}

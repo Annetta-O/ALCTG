@@ -3,21 +3,43 @@
 \setcounter{example}{0}
 
 \begin{exercise}
-$x, y, z$~---~целые числа,  для которых истинно высказывание
-$$\neg(x=y)\wedge((y<x)\rightarrow(2z>x))\wedge((x<y)\rightarrow(x>2z)$$
-Чему равно $x$, если $z$=7, $y$=16?\\
-Решение.
-$$\neg(x=16)\wedge(\neg(x>16)\vee(x<14))\wedge(\neg(x<16)\vee(x>14)),$$
-$$(x\neq16)\wedge((x\leqslant16)\vee(x<14))\wedge((x\geqslant16)\vee(x>14))$$
-1)$(x\neq16)=1$, если $x\neq16$;\\
-2)$((x\leqslant16)\vee(x<14))=1$, если $x\leqslant16$;\\
-3)$((x\geqslant16)\vee(x>14))=1$, если $x>14$;\\
-$ \Downarrow$\\
-$14<x<16$\\
-$ \Downarrow$\\
-$x=15$\\
-Ответ: $x=15$
+	$x, y, z$~---~целые числа, для которых истинно высказывание
+\begin{equation}
+		\neg(x=y)\wedge((y<x)\rightarrow(2z>x))\wedge((x<y)\rightarrow(x>2z))
+		\label{true_eq}
+\end{equation}
+	Чему равно $x$, если $z=7$, $y=16$?
 \end{exercise}
+
+\begin{solution}
+	Подставляем из условия значения $z$ и $y$ и преобразуем выражение \mref{true_eq}
+	$$
+		\neg(x=16)\wedge(\neg(x>16)\vee(x<14))\wedge(\neg(x<16)\vee(x>14)),
+	$$
+	$$
+		(x\neq16)\wedge((x\leqslant16)\vee(x<14))\wedge((x\geqslant16)\vee(x>14)).
+	$$
+	
+	Заметим, что итоговое выражение, как и изначальное, является конъюнкцией
+	трех выражений. Тогда оно истинно, если каждое из выражений должно быть
+	истинным. Это умозаключение приводит нас к трем условиям:
+\begin{enumerate}
+	\item $(x\neq16)=1$, если $x\neq16$;
+	\item $((x\leqslant16)\vee(x<14))=1$, если $x\leqslant16$;
+	\item $((x\geqslant16)\vee(x>14))=1$, если $x>14$.
+\end{enumerate}
+	
+	Пользуясь методом очень пристального взгляда, замечаем, что
+	все три условия выше можно переписать так
+	$$14<x<16,$$
+
+	\noindent откуда
+	$$x=15.$$
+\end{solution}
+
+\begin{answer}
+	$x=15$
+\end{answer}
 
 \begin{exercise}
 Постройте таблицу истинности для функции
