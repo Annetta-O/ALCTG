@@ -2,8 +2,80 @@
 
 \setcounter{example}{0}
 
-\begin{theorem}
- bdgfhgdhgdhgdgh
-\end{theorem}
+\begin{exercise}
+$x, y, z$~---~целые числа,  для которых истинно высказывание
+$$\neg(x=y)\wedge((y<x)\rightarrow(2z>x))\wedge((x<y)\rightarrow(x>2z)$$
+Чему равно $x$, если $z$=7, $y$=16?\\
+Решение.
+$$\neg(x=16)\wedge(\neg(x>16)\vee(x<14))\wedge(\neg(x<16)\vee(x>14)),$$
+$$(x\neq16)\wedge((x\leqslant16)\vee(x<14))\wedge((x\geqslant16)\vee(x>14))$$
+1)$(x\neq16)=1$, если $x\neq16$;\\
+2)$((x\leqslant16)\vee(x<14))=1$, если $x\leqslant16$;\\
+3)$((x\geqslant16)\vee(x>14))=1$, если $x>14$;\\
+$ \Downarrow$\\
+$14<x<16$\\
+$ \Downarrow$\\
+$x=15$\\
+Ответ: $x=15$
+\end{exercise}
 
-%\end{exercise}
+\begin{exercise}
+Постройте таблицу истинности для функции
+$$f(x_1,x_2,x_3)=(x_1\vee x_2)\downarrow(x_2\rightarrow x_3)$$
+Решение.\\
+$x_1$ $x_2$ $x_3$ |$f$\\
+0\ \ \ \  0 \ \   0 | 0\\
+0\ \ \ \  0 \ \   1 | 0\\
+0\ \ \ \  1 \ \   0 | 0\\
+0\ \ \ \  1 \ \   1 | 0\\
+1\ \ \ \  0 \ \   0 | 0\\
+1\ \ \ \  0 \ \   1 | 0\\
+1\ \ \ \  1 \ \   0 | 0\\
+1\ \ \ \  1 \ \   1 | 0\\
+\end{exercise}
+
+\begin{exercise}
+Докажите, что 
+$$1\oplus x_1\oplus x_2=(x1\rightarrow x_2)\wedge(x_2\rightarrow x_1)$$
+Решение.\\
+$f_1=1\oplus x_1\oplus x_2$,$f_2=(x1\rightarrow x_2)\wedge(x_2\rightarrow x_1)$\\
+\\
+$x_1$ $x_2$ |$f_1$|$f_2$\\
+0 \ \   0\ \ | 1\ \ | 1 \\
+0 \ \   1\ \ | 0\ \ | 0\\
+1 \ \   0\ \ | 0\ \ | 0\\
+1 \ \   1\ \ | 1\ \ |  1\\
+\\
+Значит, $f_1=f_2$
+\end{exercise}
+
+\begin{exercise}
+Докажите формулу
+$$\bigvee_{i,j;i\neq j} x_i\oplus x_j=(x_1\vee x_2\vee ...\vee x_n)\wedge(\neg x_1\vee \neg x_2\vee ...\vee \neg x_n)$$
+Решение.\\
+1)$\bigvee_{i,j;i\neq j} x_i\oplus x_j=1$ $\Rightarrow$ есть как минимум одна пара разных значений($x_i=1$,$x_j=0$). Тогда\\
+$(x_1\vee x_2\vee ...\vee x_n)=1$,$\neg x_1\vee \neg x_2\vee ...\vee \neg x_n)=1$ $\Rightarrow$ $(x_1\vee x_2\vee ...\vee x_n)\wedge(\neg x_1\vee \neg x_2\vee ...\vee \neg x_n)=1$\\
+2)$\bigvee_{i,j;i\neq j} x_i\oplus x_j=1$ $\Rightarrow$ все $x_i$ и $x_j$ равны 0. Тогда в правой части либо $(x_1\vee x_2\vee ...\vee x_n)=0$, либо $(\neg x_1\vee \neg x_2\vee ...\vee \neg x_n)=0$, а значит и вся правая часть равна 0.\\
+\\
+ЧТД.
+\end{exercise}
+
+\begin{exercise}
+Постройте таблицу истинности для f и выразите её через операции $\vee$,$\wedge$,$\neg$, если
+$$f=x_1\oplus x_2\oplus x_3\oplus x_1x_2\oplus x_1x_3\oplus x_2x_3\oplus x_1x_2x_3.$$
+Решение.\\
+\\
+$x_1$ $x_2$ $x_3$ |$f$\\
+0\ \ \ \  0 \ \   0 | 0\\
+0\ \ \ \  0 \ \   1 | 1\\
+0\ \ \ \  1 \ \   0 | 1\\
+0\ \ \ \  1 \ \   1 | 1\\
+1\ \ \ \  0 \ \   0 | 1\\
+1\ \ \ \  0 \ \   1 | 1\\
+1\ \ \ \  1 \ \   0 | 1\\
+1\ \ \ \  1 \ \   1 | 1\\
+\\
+Перестроние с использованием  $\vee$,$\wedge$,$\neg$: $f_1=x_1\vee x_2\vee x_3$.
+
+
+\end{exercise}
