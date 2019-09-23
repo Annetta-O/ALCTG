@@ -41,48 +41,61 @@
 	$x=15$
 \end{answer}
 
-\begin{exercise}
-Постройте таблицу истинности для функции
-\begin{equation}
-		f(x_1,x_2,x_3)=(x_1\vee x_2)\downarrow(x_2\rightarrow x_3)
-		\label{true_eq}
-\end{equation}
+\newpage
 
+\begin{exercise}
+	Постройте таблицу истинности для функции
+\begin{equation}
+	f(x_1,x_2,x_3)=(x_1\vee x_2)\downarrow(x_2\rightarrow x_3)
+	\label{zero}
+\end{equation}
 \end{exercise}
 
 \begin{solution}
-	Таблица истинности:\\
+
+\begin{paracol}{2}
+
+	Давайте преобразуем выражение \mref{zero}. 
+	Для этого представим $x_2\rightarrow x_3$ как 
+	$\neg x_2 \vee x_3$. Далее вспомним, что
+	$$x\downarrow y = \overline{x\vee y},$$
+	
+	\noindent откуда получаем, что
+	$$f = \neg(x_1\vee x_2 \vee \neg x_2 \vee x_3).$$
+
+	Видно, что под отрицанием стоит дизъюнкция,
+	которая на любых наборах будет равна единице,
+	поэтому $f$~---~тождественный ноль.
+
+\switchcolumn
+		
 \begin{center}
  \begin{tabular}{| c c c | c |}
   \hline	
- $ x_1$ & $x_2$ & $x_3$ & $f$ \\ [0,5 ex]
+ $x_1$ & $x_2$ & $x_3$ & $f$ \T\B \\
   \hline\hline
-  0 & 0 & 0 & 0\\ [1,5 ex]
-  \hline
-  0 & 0 & 1 & 0 \\ [1,5 ex]
-  \hline
-  0 & 1 & 0 & 0 \\ [1,5 ex]
-  \hline
-  0 & 1 & 1 & 0 \\ [1,5 ex]
-  \hline
-  1 & 0 & 0 & 0\\ [1,5 ex]
-  \hline
-  1 & 0 & 1 & 0\\ [1,5 ex]
-  \hline
-  1 & 1 & 0 & 0\\ [1,5 ex]
-  \hline
-  1 & 1 & 1 & 0\\ [1,5 ex]
+  0 & 0 & 0 & 0 \T\B \\ 
+  0 & 0 & 1 & 0 \B \\
+  0 & 1 & 0 & 0 \B \\
+  0 & 1 & 1 & 0 \B \\
+  1 & 0 & 0 & 0 \B \\
+  1 & 0 & 1 & 0 \B \\
+  1 & 1 & 0 & 0 \B \\
+  1 & 1 & 1 & 0 \B \\
   \hline
  \end{tabular}
- \end{center}
-	 Функция на всех значениях $x_1, x_2, x_3$ принимает значение $0$.
+ \vspace{1cm}
+ 
+ \small Таблица истинности функции $f$.
+\end{center}
+
+\end{paracol}
 \end{solution}
 
 \begin{exercise}
 Докажите, что 
 \begin{equation}
 		1\oplus x_1\oplus x_2=(x_1\rightarrow x_2)\wedge(x_2\rightarrow x_1)
-		\label{true_eq}
 \end{equation}
 
 \end{exercise}
@@ -112,7 +125,6 @@
 Докажите формулу
 \begin{equation}
 		\bigvee_{i,j;i\neq j} x_i\oplus x_j=(x_1\vee x_2\vee ...\vee x_n)\wedge(\neg x_1\vee \neg x_2\vee ...\vee \neg x_n)
-		\label{true_eq}
 \end{equation}
 
 \end{exercise}
@@ -134,7 +146,6 @@ $(x_1\vee x_2\vee ...\vee x_n)=1$,$\neg x_1\vee \neg x_2\vee ...\vee \neg x_n)=1
 Постройте таблицу истинности для f и выразите её через операции $\vee$,$\wedge$,$\neg$, если
 \begin{equation}
 		f=x_1\oplus x_2\oplus x_3\oplus x_1x_2\oplus x_1x_3\oplus x_2x_3\oplus 			x_1x_2x_3.
-		\label{true_eq}
 \end{equation}
 
 \end{exercise}
