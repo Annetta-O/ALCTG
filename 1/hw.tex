@@ -43,61 +43,130 @@
 
 \begin{exercise}
 Постройте таблицу истинности для функции
-$$f(x_1,x_2,x_3)=(x_1\vee x_2)\downarrow(x_2\rightarrow x_3)$$
-Решение.\\
-$x_1$ $x_2$ $x_3$ |$f$\\
-0\ \ \ \  0 \ \   0 | 0\\
-0\ \ \ \  0 \ \   1 | 0\\
-0\ \ \ \  1 \ \   0 | 0\\
-0\ \ \ \  1 \ \   1 | 0\\
-1\ \ \ \  0 \ \   0 | 0\\
-1\ \ \ \  0 \ \   1 | 0\\
-1\ \ \ \  1 \ \   0 | 0\\
-1\ \ \ \  1 \ \   1 | 0\\
+\begin{equation}
+		f(x_1,x_2,x_3)=(x_1\vee x_2)\downarrow(x_2\rightarrow x_3)
+		\label{true_eq}
+\end{equation}
+
 \end{exercise}
+
+\begin{solution}
+	Таблица истинности:\\
+\begin{center}
+ \begin{tabular}{| c c c | c |}
+  \hline	
+ $ x_1$ & $x_2$ & $x_3$ & $f$ \\ [0,5 ex]
+  \hline\hline
+  0 & 0 & 0 & 0\\ [1,5 ex]
+  \hline
+  0 & 0 & 1 & 0 \\ [1,5 ex]
+  \hline
+  0 & 1 & 0 & 0 \\ [1,5 ex]
+  \hline
+  0 & 1 & 1 & 0 \\ [1,5 ex]
+  \hline
+  1 & 0 & 0 & 0\\ [1,5 ex]
+  \hline
+  1 & 0 & 1 & 0\\ [1,5 ex]
+  \hline
+  1 & 1 & 0 & 0\\ [1,5 ex]
+  \hline
+  1 & 1 & 1 & 0\\ [1,5 ex]
+  \hline
+ \end{tabular}
+ \end{center}
+	 Функция на всех значениях $x_1, x_2, x_3$ принимает значение $0$.
+\end{solution}
 
 \begin{exercise}
 Докажите, что 
-$$1\oplus x_1\oplus x_2=(x1\rightarrow x_2)\wedge(x_2\rightarrow x_1)$$
-Решение.\\
-$f_1=1\oplus x_1\oplus x_2$,$f_2=(x1\rightarrow x_2)\wedge(x_2\rightarrow x_1)$\\
-\\
-$x_1$ $x_2$ |$f_1$|$f_2$\\
-0 \ \   0\ \ | 1\ \ | 1 \\
-0 \ \   1\ \ | 0\ \ | 0\\
-1 \ \   0\ \ | 0\ \ | 0\\
-1 \ \   1\ \ | 1\ \ |  1\\
-\\
-Значит, $f_1=f_2$
+\begin{equation}
+		1\oplus x_1\oplus x_2=(x_1\rightarrow x_2)\wedge(x_2\rightarrow x_1)
+		\label{true_eq}
+\end{equation}
+
 \end{exercise}
+
+\begin{solution}
+ Пусть $f_1=1\oplus x_1\oplus x_2$, $f_2=(x1\rightarrow x_2)\wedge(x_2\rightarrow x_1)$ . Тогда \\
+ 
+\begin{center}
+ \begin{tabular}{| c c | c | c |}
+  \hline	
+ $ x_1$ & $x_2$ & $f_1$ & $f_2$ \\ [0,5 ex]
+  \hline\hline
+  0 & 0 & 1 & 1\\ [1,5 ex]
+  \hline
+  0 & 1 & 0 & 0 \\ [1,5 ex]
+  \hline
+  1 & 0 & 0 & 0 \\ [1,5 ex]
+  \hline
+  1 & 1 & 1 & 1 \\ [1,5 ex]
+  \hline
+ \end{tabular}
+ \end{center}
+Видно, что векторы значений $f_1$ и $f_2$ совпадают, а значит, $f_1=f_2$(т.е. утверждение (1.3) ВЕРНО).
+\end{solution}
 
 \begin{exercise}
 Докажите формулу
-$$\bigvee_{i,j;i\neq j} x_i\oplus x_j=(x_1\vee x_2\vee ...\vee x_n)\wedge(\neg x_1\vee \neg x_2\vee ...\vee \neg x_n)$$
-Решение.\\
-1)$\bigvee_{i,j;i\neq j} x_i\oplus x_j=1$ $\Rightarrow$ есть как минимум одна пара разных значений($x_i=1$,$x_j=0$). Тогда\\
-$(x_1\vee x_2\vee ...\vee x_n)=1$,$\neg x_1\vee \neg x_2\vee ...\vee \neg x_n)=1$ $\Rightarrow$ $(x_1\vee x_2\vee ...\vee x_n)\wedge(\neg x_1\vee \neg x_2\vee ...\vee \neg x_n)=1$\\
-2)$\bigvee_{i,j;i\neq j} x_i\oplus x_j=1$ $\Rightarrow$ все $x_i$ и $x_j$ равны 0. Тогда в правой части либо $(x_1\vee x_2\vee ...\vee x_n)=0$, либо $(\neg x_1\vee \neg x_2\vee ...\vee \neg x_n)=0$, а значит и вся правая часть равна 0.\\
-\\
-ЧТД.
+\begin{equation}
+		\bigvee_{i,j;i\neq j} x_i\oplus x_j=(x_1\vee x_2\vee ...\vee x_n)\wedge(\neg x_1\vee \neg x_2\vee ...\vee \neg x_n)
+		\label{true_eq}
+\end{equation}
+
 \end{exercise}
+
+\begin{solution}
+Рассмотрим 2 случая: \\
+\begin{enumerate}
+	\item $\bigvee_{i,j;i\neq j} x_i\oplus x_j=1$ $\Rightarrow$ есть как минимум одна пара разных значений($x_i=1$,$x_j=0$). Тогда\\
+$(x_1\vee x_2\vee ...\vee x_n)=1$,$\neg x_1\vee \neg x_2\vee ...\vee \neg x_n)=1$ $\Rightarrow$ $(x_1\vee x_2\vee ...\vee x_n)\wedge(\neg x_1\vee \neg x_2\vee ...\vee \neg x_n)=1$;
+	\item $\bigvee_{i,j;i\neq j} x_i\oplus x_j=1$ $\Rightarrow$ все $x_i$ и $x_j$ равны 0. Тогда в правой части либо $(x_1\vee x_2\vee ...\vee x_n)=0$, либо $(\neg x_1\vee \neg x_2\vee ...\vee \neg x_n)=0$, а значит и вся правая часть равна 0.
+\end{enumerate}
+Видно, что векторы значений левой и правой частей равенства совпадают, а значит, формула верна.
+
+\end{solution}
+
+
 
 \begin{exercise}
 Постройте таблицу истинности для f и выразите её через операции $\vee$,$\wedge$,$\neg$, если
-$$f=x_1\oplus x_2\oplus x_3\oplus x_1x_2\oplus x_1x_3\oplus x_2x_3\oplus x_1x_2x_3.$$
-Решение.\\
-\\
-$x_1$ $x_2$ $x_3$ |$f$\\
-0\ \ \ \  0 \ \   0 | 0\\
-0\ \ \ \  0 \ \   1 | 1\\
-0\ \ \ \  1 \ \   0 | 1\\
-0\ \ \ \  1 \ \   1 | 1\\
-1\ \ \ \  0 \ \   0 | 1\\
-1\ \ \ \  0 \ \   1 | 1\\
-1\ \ \ \  1 \ \   0 | 1\\
-1\ \ \ \  1 \ \   1 | 1\\
-\\
-Перестроние с использованием  $\vee$,$\wedge$,$\neg$: $f_1=x_1\vee x_2\vee x_3$.
-
+\begin{equation}
+		f=x_1\oplus x_2\oplus x_3\oplus x_1x_2\oplus x_1x_3\oplus x_2x_3\oplus 			x_1x_2x_3.
+		\label{true_eq}
+\end{equation}
 
 \end{exercise}
+
+\begin{solution}
+Таблица истинности: \\
+\begin{center}
+ \begin{tabular}{| c c c | c |}
+  \hline	
+ $ x_1$ & $x_2$ & $x_3$ & $f$ \\ [0,5 ex]
+  \hline\hline
+  0 & 0 & 0 & 0\\ [1,5 ex]
+  \hline
+  0 & 0 & 1 & 1 \\ [1,5 ex]
+  \hline
+  0 & 1 & 0 & 1 \\ [1,5 ex]
+  \hline
+  0 & 1 & 1 & 1 \\ [1,5 ex]
+  \hline
+  1 & 0 & 0 & 1 \\ [1,5 ex]
+  \hline
+  1 & 0 & 1 & 1 \\ [1,5 ex]
+  \hline
+  1 & 1 & 0 & 1 \\ [1,5 ex]
+  \hline
+  1 & 1 & 1 & 1 \\ [1,5 ex]
+  \hline
+ \end{tabular}
+ \end{center}
+Перестроние с использованием  $\vee$,$\wedge$,$\neg$: \\$f_1=x_1\vee x_2\vee x_3$.
+\end{solution}
+
+\begin{answer}
+$f_1=x_1\vee x_2\vee x_3$.
+\end{answer}
