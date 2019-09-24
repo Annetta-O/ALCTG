@@ -86,6 +86,7 @@
  \end{tabular}
  \vspace{1cm}
  
+ \
  \small Таблица истинности функции $f$.
 \end{center}
 
@@ -101,24 +102,33 @@
 \end{exercise}
 
 \begin{solution}
- Пусть $f_1=1\oplus x_1\oplus x_2$, $f_2=(x1\rightarrow x_2)\wedge(x_2\rightarrow x_1)$ . Тогда \\
+\begin{paracol}{2}
+ 
+ Пусть $f_1=1\oplus x_1\oplus x_2$, $f_2=(x1\rightarrow x_2)\wedge(x_2\rightarrow x_1)$ . \\
+
+ Видно, что векторы значений $f_1$ и $f_2$ совпадают, а значит, $f_1=f_2$(т.е. утверждение (1.3) ВЕРНО).
+
+ \switchcolumn
  
 \begin{center}
  \begin{tabular}{| c c | c | c |}
   \hline	
- $ x_1$ & $x_2$ & $f_1$ & $f_2$ \\ [0,5 ex]
+ $ x_1$ & $x_2$ & $f_1$ & $f_2$ \T\B\\
   \hline\hline
-  0 & 0 & 1 & 1\\ [1,5 ex]
-  \hline
-  0 & 1 & 0 & 0 \\ [1,5 ex]
-  \hline
-  1 & 0 & 0 & 0 \\ [1,5 ex]
-  \hline
-  1 & 1 & 1 & 1 \\ [1,5 ex]
+  0 & 0 & 1 & 1\T\B \\
+  0 & 1 & 0 & 0 \B \\
+  1 & 0 & 0 & 0 \B \\
+  1 & 1 & 1 & 1 \B \\
   \hline
  \end{tabular}
+ \vspace{1 cm}
+ 
+ \
+ \small Таблица истинности функции $f_1$, $f_2$. 
+ 
+ 
  \end{center}
-Видно, что векторы значений $f_1$ и $f_2$ совпадают, а значит, $f_1=f_2$(т.е. утверждение (1.3) ВЕРНО).
+ \end{paracol}
 \end{solution}
 
 \begin{exercise}
@@ -151,31 +161,36 @@ $(x_1\vee x_2\vee ...\vee x_n)=1$,$\neg x_1\vee \neg x_2\vee ...\vee \neg x_n)=1
 \end{exercise}
 
 \begin{solution}
-Таблица истинности: \\
+\begin{paracol}{2}
+\noindent
+\begin{enumerate}
+	\item Функция $f$ принимает значение $0$ только при $x_1=x_2=x_3=0$.Во всех остальных случаях $f=1$;
+	\item  Перестроение с использованием $\vee, \wedge, \neg$:\\
+	$f_1=x_1\vee x_2\vee x_3$.\\
+	Видно, что функция  $f_1$ принимает значение $0$ только при $x_1=x_2=x_3=0$. А во всех остальных случаях $f_1=1$.
+\end{enumerate}
+\switchcolumn
 \begin{center}
  \begin{tabular}{| c c c | c |}
   \hline	
- $ x_1$ & $x_2$ & $x_3$ & $f$ \\ [0,5 ex]
+ $ x_1$ & $x_2$ & $x_3$ & $f$ \T\B \\
   \hline\hline
-  0 & 0 & 0 & 0\\ [1,5 ex]
-  \hline
-  0 & 0 & 1 & 1 \\ [1,5 ex]
-  \hline
-  0 & 1 & 0 & 1 \\ [1,5 ex]
-  \hline
-  0 & 1 & 1 & 1 \\ [1,5 ex]
-  \hline
-  1 & 0 & 0 & 1 \\ [1,5 ex]
-  \hline
-  1 & 0 & 1 & 1 \\ [1,5 ex]
-  \hline
-  1 & 1 & 0 & 1 \\ [1,5 ex]
-  \hline
-  1 & 1 & 1 & 1 \\ [1,5 ex]
+  0 & 0 & 0 & 0\T\B \\
+  0 & 0 & 1 & 1 \B \\
+  0 & 1 & 0 & 1 \B \\
+  0 & 1 & 1 & 1 \B \\
+  1 & 0 & 0 & 1 \B \\
+  1 & 0 & 1 & 1 \B \\
+  1 & 1 & 0 & 1 \B \\
+  1 & 1 & 1 & 1 \B \\
   \hline
  \end{tabular}
+ \vspace{1 cm}
+ \
+ 
+ \small Таблица истинности функции $f$.
  \end{center}
-Перестроние с использованием  $\vee$,$\wedge$,$\neg$: \\$f_1=x_1\vee x_2\vee x_3$.
+\end{paracol}
 \end{solution}
 
 \begin{answer}
