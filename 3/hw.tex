@@ -7,6 +7,38 @@
 \end{exercise}
 
 \begin{solution}
+Построим таблицу истинности:\\
+
+
+
+\begin{center}
+ \begin{tabular}{| c c c | c | c | c | c | c |}
+  \hline	
+ $x$ & $y$ & $z$ & $x\wedge y$ & $\bar{z}$ & $xz\oplus \bar{z}$ & $x\rightarrow y$ & $f$\T\B \\
+  \hline\hline
+  0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 \T\B \\ 
+  0 & 0 & 1 & 0 & 1 & 1 & 1 & 1\B \\
+  0 & 1 & 0 & 0 & 0 & 0 & 1 & 0\B \\
+  0 & 1 & 1 & 0 & 1 & 1 & 0 & 0 \B \\
+  1 & 0 & 0 & 0 & 0 & 0 & 1 & 0\B \\
+  1 & 0 & 1 & 1 & 1 & 0 & 0 & 1 \B \\
+  1 & 1 & 0 & 0 & 0 & 0 & 1 & 0 \B \\
+  1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 \B \\
+  \hline
+ \end{tabular} 
+ \vspace{0,2 cm}
+ 
+ \
+ \small Таблица истинности функции.
+ 
+ \end{center}
+ \begin{enumerate}
+\item $f=x^0y^0z^0\vee x^0y^0z^1\vee x^1y^0z^1\vee x^1y^1z^1$
+\item $f=\bar{x}\bar{y}\bar{z}\vee \bar{x}\bar{y}z\vee x\bar{y}z\vee xyz$ ~---~СДНФ
+\item$f=(x^1\vee y^0\vee z^1)\wedge(x^0\vee y^1\vee z^1 )\wedge(x^1\vee y^0\vee z^0)\wedge(x^0\vee y^0\vee z^1)$
+\item$f=(x\vee \bar{y}\vee z)\wedge(\bar{x}\vee y\vee z)\wedge(x\vee \bar{y}\vee z)\wedge(\bar{x}\vee \bar{y}\vee z)$~---~СКНФ
+ \end{enumerate}
+ 
 \end{solution}
 
 \begin{exercise}
@@ -14,6 +46,8 @@
 \end{exercise}
 
 \begin{solution}
+Построив таблицы истинности $f_1=\neg x$,$f_2=x\oplus 1$, получим, что их векторы значений совпадают, значит, $\neg x=x\oplus 1$.Тогда
+$$[{\neg , \oplus}]=[{1,\oplus}]\subseteq L$$.
 \end{solution}
 
 \begin{exercise}
@@ -21,7 +55,42 @@
 	$f(x_1,x_2,x_3)=00111100$ и разложите ее в ДНФ и КНФ.
 \end{exercise}
 
-\begin{solution}
+\begin{solution} Построим таблицу истинности и напишем сначала СДНФ и СКНФ данной функции $f$:
+
+\begin{center}
+ \begin{tabular}{| c c c | c |}
+  \hline	
+ $x_1$ & $x_2$ & $x_3$ & $f$ \T\B \\
+  \hline\hline
+  0 & 0 & 0 & 0 \T\B \\ 
+  0 & 0 & 1 & 0 \B \\
+  0 & 1 & 0 & 1 \B \\
+  0 & 1 & 1 & 1 \B \\
+  1 & 0 & 0 & 1 \B \\
+  1 & 0 & 1 & 1 \B \\
+  1 & 1 & 0 & 0 \B \\
+  1 & 1 & 1 & 0 \B \\
+  \hline
+ \end{tabular}
+ \vspace{0,4 cm}
+ 
+ \
+ \small Таблица истинности функции $f$.
+\end{center}
+\begin{enumerate}
+\item$f=x_1^0x_2^1x_3^0\vee x_1^0x_2^1x_3^1\vee x_1^1x_2^0x_3^0\vee x_1^0x_2^0x_3^1$,\\
+$f=\bar{x_1}x_2\bar{x_3}\vee \bar{x_1}x_2x_3\vee x_1\bar{x_2}\bar{x_3}\vee x_1\bar{x_2}x_3$~---~CДНФ.
+\item$f=(x_1^1\vee x_2^1\vee x_3^1)\wedge(x_1^1\vee x_2^1\vee x_3^0)\wedge(x_1^0\vee x_2^0\vee x_3^1)\wedge(x_1^0\vee x_2^0\vee x_3^0)$,\\
+$f=(x_1\vee x_2\vee x_3)\wedge(x_1\vee x_2\vee \bar{x_3})\wedge(\bar{x_1}\vee \bar{x_2}\vee x_3)\wedge(\bar{x_1}\vee \bar{x_2}\vee \bar{x_3})$~---~СКНФ.\\
+
+\end{enumerate}
+Из таблицы истинности видно, что если брать одинаковые значения  $x_1$ и $x_2$, то значени функции при изменении значений $x_3$ меняться не будет. Значит, $x_3$ - фиктивная переменная. Про $x_1$, $x_2$ такого сказать нельзя, поэтому они являются существенными  переменными. Тогда:
+\begin{enumerate}
+\item КНФ: $f=(x_1\vee x_2)\wedge(x_1\vee x_2)\wedge(\bar{x_1}\vee \bar{x_2})\wedge(\bar{x_1}\vee \bar{x_2}\vee)$
+\item ДНФ: $f=\bar{x_1}x_2\vee \bar{x_1}x_2\vee x_1\bar{x_2}\bar\vee x_1\bar{x_2}$
+\end{enumerate}
+
+
 \end{solution}
 
 \begin{exercise}
@@ -29,6 +98,12 @@
 \end{exercise}
 
 \begin{solution}
+Выразим функции $\oplus$ и $\to$ через $\vee$,$\wedge$,$\neg$:
+\begin{enumerate}
+\item $(x\to y)\equiv(\neg x\vee y)$,
+\item $(x\oplus y)\equiv(x\bar{y}\vee \bar{x}y)$
+\end{enumerate}
+Значит, система функций $\{\oplus,\to\}$ полна.
 \end{solution}
 
 \begin{exercise}
@@ -37,6 +112,7 @@
 \end{exercise}
 
 \begin{solution}
+a
 \end{solution}
 
 \begin{exercise}
@@ -46,6 +122,7 @@
 \end{exercise}
 
 \begin{solution}
+a
 \end{solution}
 
 \begin{exercise}
@@ -56,6 +133,31 @@
 \end{exercise}
 
 \begin{solution}
+Построим таблицу истинности для функции $f$:
+\begin{center}
+ \begin{tabular}{| c c c | c | c | c | c |}
+  \hline	
+ $x$ & $y$ & $z$ & $\bar{xy}$ & $\bar{xz}$ & $\bar{yz}$ & $f$ \T\B \\
+  \hline\hline
+  0 & 0 & 0 & 1 & 1 & 1 & 1 \T\B \\ 
+  0 & 0 & 1 & 1 & 1 & 1 & 1 \B \\
+  0 & 1 & 0 & 1 & 1 & 1 & 1 \B \\
+  0 & 1 & 1 & 1 & 1 & 1 & 1 \B \\
+  1 & 0 & 0 & 1 & 1 & 0 & 1 \B \\
+  1 & 0 & 1 & 1 & 0 & 1 & 1\B \\
+  1 & 1 & 0 & 0 & 1 & 1 & 1 \B \\
+  1 & 1 & 1 & 0 & 0 & 0 & 0 \B \\
+  \hline
+ \end{tabular}
+ \vspace{0,4 cm}
+ 
+ \
+ \small Таблица истинности функции $f$.
+\end{center}
+
+В каждом из наборов, где количество единиц меняется от 0 до 3 в наборе, функция принимает одинаковое значение. То есть на наборах $(0,0,1)$, $(0,1,0)$,$(1,0,0)$ функция не меняет значение. Аналогично для наборов, где единицы 2 единицы из трех. Поменяв местами переменные, вектор значений не изменился, значит, функция является симметрической.\\
+
+Симметрических функций от n переменных существует $2^{n+1}$ штук, потому что существует 2 варианта значения функции, не зависящих от расположения переменных на одном наборе. Таких наборов $n+1$ штук, а значит, симметрических функций от n переменных $2^{n+1}$.
 \end{solution}
 
 \begin{exercise}
@@ -64,6 +166,8 @@
 \end{exercise}
 
 \begin{solution}
+Предположим обратное. Значит неконстантная симметрическая функция несущественно зависит от переменных, то есть
+$$f(x_1,..., x_{i-1}, 1, ... x_n) = f(x_1,..., x_{i-1}, 0, ... x_n)$$, а так как эта функция симметрическая, то от перестановки переменных значение ее меняться не будет: $f(\overleftarrow{x})=0 \vee  f(\overleftarrow{x})=1$, что противоречит высказыванию о том, что функция неконстантная.  Значит, неконстантная симметрическая функция существенно зависит от переменных.
 \end{solution}
 
 \begin{exercise}
@@ -72,5 +176,6 @@
 \end{exercise}
 
 \begin{solution}
+a
 \end{solution}
 
