@@ -112,7 +112,15 @@ $f=(x_1\vee x_2\vee x_3)\wedge(x_1\vee x_2\vee \bar{x_3})\wedge(\bar{x_1}\vee \b
 \end{exercise}
 
 \begin{solution}
-a
+Так как $f$~---~несамодвойственная функция, то существует  последовательность значений /{$a_1,...,a_n$/} из нулей и единиц, такая что $f(a_1,...,a_n)=f(\bar{a_1},...,\bar{a_n})=c$, где $c=0$ или $c=1$;\\
+Подставим для любых i в качестве аргументов в f:\\
+$x_i=x$, если $a_i=1$ и $x_i=\bar{x}$, если $a_i=0$;\\
+$g(x)=f(x_1,...,x_n)$:
+\begin{enumerate}
+\item $g(1)=f(a_1,...,a_n)$
+\item $g(0)=f(\bar{a_1},...,\bar{x_n})$
+\end{enumerate} 
+$g(x)=c$, а $\bar{g(x)}=\bar{c}$.
 \end{solution}
 
 \begin{exercise}
@@ -122,7 +130,16 @@ a
 \end{exercise}
 
 \begin{solution}
-a
+КНФ:\\
+$(x_1 \vee ...\vee x_n)\wedge(x_1 \vee ...\vee xn_)$\\
+Покажем, что функция равна дизъюнкции всевозможных скобок $(x_i\oplus  x_j )$ для всех $i\neq j$
+\begin{enumerate}
+\item если $x_i=x_j$ :\\
+$(0\oplus 0) \vee  ... \vee (0\oplus0) = 0$;\\
+$(1 \oplus 1) \vee ... \vee (1\oplus 1) = 0$;
+\item найдется скобка, где $x_i\neq x_j$ :\\
+$(0 \oplus 0) \vee ... \vee (0 \oplus 1) \vee ... \vee (1 \oplus 1) = 1$;
+\end{enumerate}
 \end{solution}
 
 \begin{exercise}
@@ -176,6 +193,6 @@ $$f(x_1,..., x_{i-1}, 1, ... x_n) = f(x_1,..., x_{i-1}, 0, ... x_n)$$, а так
 \end{exercise}
 
 \begin{solution}
-a
+Донт ноу!!!!!!!!!!!!!!!!!!!!!
 \end{solution}
 
