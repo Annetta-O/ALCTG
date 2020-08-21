@@ -1,0 +1,42 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+
+\author{Ахметжанов Руслан}
+\title{•}
+\date{\today}
+
+\begin{document}
+
+\maketitle 
+
+\section{Сколько существует слов длины n, состоящих из букв a и b таких, что они не заканчиваются на a и две буквы b не стоят рядом?}
+ В задаче 6 на восьмую неделю был разобран аналогичный случай, но вместо b там единицы, а вместо a там нули. Но есть и отличие, Если там длина последовательности была $n(16)$, то сейчас $n-2$(два последних места всегда <<ab>>). Тогда ответом на задачу будет $F_{n}$, где $F_n$-- n-ное число фибоначи.
+ А из задачи с семинара мы знаем,
+ 
+  что $F_n = \frac{1}{\sqrt{5}}(1+\sqrt{5})^n - (1-\sqrt{5})^n $
+ 
+\section{Упростите $\sum_{k=0}^{m}(-\frac{1}{2}) {m \choose k} {2k \choose k}$} 
+
+$\sum\limits_{k=0}^{m}(-\frac{1}{2})^k {m \choose k} {2k \choose k} = \sum\limits_{k=0}^{m} \frac{(-1)^k}{2^k} \frac{2^k}{k!} {m \choose k} = \sum\limits_{k=0}^{m}  \frac{(-1)^k}{k!} {m \choose k}$
+
+Заметим схожесть со знакопеременной суммой биноминальных коэффицентов:
+
+$ \sum\limits_{k=0}^{m} {m \choose k} (-x)^k = (1-x)^m$
+
+Так как у нас |x| = 1 пусть $g_{(x)} = \sum\limits_{k=0}^{m} {m \choose k}(x)$, 
+
+тогда 
+$G_{(x)} = \int g_{(x)} =  \sum\limits_{k=0}^{m} {m \choose k} \frac{(-x)^2}{2} $, $ \int \int g_{(x)} =  \sum\limits_{k=0}^{m} {m \choose k} \frac{(-x)^3}{2*3}$
+
+
+И так далее, всего k-1 раз, в итоге получаем: $\sum\limits_{k=0}^{m}  \frac{(-x)^k}{k!} {m \choose k}$
+
+А так как  $g_{(x)} = \sum\limits_{k=0}^{m} {m \choose k}(x) = (1-x)^m$,
+
+то  $\sum_{k=0}^{m}(-\frac{1}{2}) {m \choose k} {2k \choose k} = \frac{x^{k-1}}{(k-1)!} - \frac{x^k}{k!} $
+\end{document}

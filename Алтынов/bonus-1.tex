@@ -1,0 +1,60 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english.russian]{babel}
+\usepackage{graphicx}
+\graphicspath{{pictures/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\usepackage[left=2cm,right=2cm,
+    top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools}
+
+\author{Altunov A.}
+\title{АЛКТГ - Бонусные задачи (1, 5)}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\newpage
+\textbf{Week 1.} Найдите асимптотическую оценку количества булевых функций от n переменных, которые зависят от всех своих аргументов существенно. Иначе говоря, надо придумать такие верхнюю и нижнюю оценки на это количество, чтобы их отношение стремилось к 1 при $ n \rightarrow \infty $.
+\\
+
+Докажем, что оценка $2^{2^n}$, т.е. общее число булевых функций от $n$ переменных, является искомой.
+
+Практически все функции от $n$ переменных имеют все существенные переменные. Пусть $i$-я переменная фиктивна ($i \in [1,n]$), значит её можно удалить, получая функции от $n-1$ переменной. Тогда оценка сверху: $n*2^{2^{n-1}}$ (для тех функций, где не все переменные существенны). Ясно, что отношение к общему числу функций есть бесконечно малая величина: $n*2^{-2^{n-1}} \rightarrow 0$ при $ n \rightarrow \infty $. Следовательно оценка $2^{2^n}$ верна, ч.т.д.
+\\
+
+\textbf{Week 5.} Назовем \textit{турниром} орграф, в котором для любых двух вершин $u,v$ либо $(u,v) \in E$, либо $ (v,u) \in E $. Докажите, что в любом турнире
+\begin{equation}
+\sum\limits_{v \in V} (outdeg(v))^2 = \sum\limits_{v \in V} (indeg(v))^2
+\end{equation}
+\\
+
+Сначала найдем количество ребер.Пусть мы имеем неориентированный граф на n вершинах. Так как по условию любые две вершины соединены ребром, то граф полный, то есть всего ребер: $ \dfrac{n(n-1)}{2} $.
+
+Добавляем направления, получаем орграф на n вершинах. По лемме о рукопажатиях получаем, что: $ \sum\limits_{v \in V} (outdeg(v)) = \sum\limits_{v \in V} (indeg(v)) = \dfrac{n(n-1)}{2} $.
+
+Пусть в i-ую вершину входит $k_i$ ребер. Так вершина соединена со всеми остальными $n-1$ вершинами, выходящих из нее ребер получится: $ n-1-k_i $. 
+\\
+При этом: 
+\\
+$\sum\limits_i^n k_i = \sum\limits_{v \in V} (indeg(v)) = \dfrac{n(n-1)}{2}$ 
+\\
+$\sum\limits_i^n (n-1-k_i) = \sum\limits_{v \in V} (outdeg(v))$
+
+Покажем, что $\sum\limits_i^n k_i^2 = \sum\limits_i^n (n-1-k_i)^2$
+\\
+$\sum\limits_i^n k_i^2 = \sum\limits_i^n (n^2-2n+1-2(n-1)k_i) + \sum\limits_i^n k_i^2$
+\\
+$0 = \sum\limits_i^n (n^2-2n+1) - \sum\limits_i^n 2(n-1)k_i)$
+\\
+$0 = n(n-1)^2 - 2(n-1)\sum\limits_i^n k_i$
+\\
+$n(n-1)^2 = 2(n-1)\dfrac{n(n-1)}{2}$
+\\
+$n(n-1)^2 = n(n-1)^2$, ч.т.д.
+
+
+\end{document}
