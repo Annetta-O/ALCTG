@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.9.19)  22 SEP 2019 12:21
 entering extended mode
  restricted \write18 enabled.
@@ -9,10 +10,338 @@ LaTeX2e <2018-12-01>
 ! Emergency stop.
 <*> intro.tex
              
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.11)  19 SEP 2019 22:37
+entering extended mode
+**./intro.tex
+(intro.tex
+LaTeX2e <2018-12-01>
+! Undefined control sequence.
+l.1 \chapter
+            *{Введение}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \chapter*
+             {Введение}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no * in font nullfont!
+
+! Package inputenc Error: Unicode character В (U+0412)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \chapter*{В
+                ведение}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character в (U+0432)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \chapter*{Вв
+                  едение}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character е (U+0435)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \chapter*{Вве
+                    дение}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character д (U+0434)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \chapter*{Введ
+                      ение}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character е (U+0435)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \chapter*{Введе
+                        ние}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character н (U+043D)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \chapter*{Введен
+                          ие}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character и (U+0438)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \chapter*{Введени
+                            е}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character е (U+0435)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \chapter*{Введение
+                              }
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--2
+[] 
+ []
+
+! Undefined control sequence.
+l.3 \epigraph
+             {\itshape If you give a man a fish he is hungry again in an hour.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \epigraph{\itshape I
+                        f you give a man a fish he is hungry again in an hour.
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no P in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no m in font nullfont!
+
+Overfull \hbox (26.92218pt too wide) in paragraph at lines 3--6
+[]\OT1/cmr/m/it/10 If
+ []
+
+
+Overfull \hbox (15.33324pt too wide) in paragraph at lines 3--6
+\OT1/cmr/m/it/10 you
+ []
+
+
+Overfull \hbox (16.86653pt too wide) in paragraph at lines 3--6
+\OT1/cmr/m/it/10 give
+ []
+
+
+Overfull \hbox (5.11108pt too wide) in paragraph at lines 3--6
+\OT1/cmr/m/it/10 a
+ []
+
+
+Overfull \hbox (18.91101pt too wide) in paragraph at lines 3--6
+\OT1/cmr/m/it/10 man
+ []
+
+
+Overfull \hbox (5.11108pt too wide) in paragraph at lines 3--6
+\OT1/cmr/m/it/10 a
+ []
+
+
+Overfull \hbox (14.82214pt too wide) in paragraph at lines 3--6
+\OT1/cmr/m/it/10 fish
+ []
+
+
+Overfull \hbox (9.71104pt too wide) in paragraph at lines 3--6
+\OT1/cmr/m/it/10 he
+ []
+
+
+Overfull \hbox (7.15552pt too wide) in paragraph at lines 3--6
+\OT1/cmr/m/it/10 is
+ []
+
+
+Overfull \hbox (19.67766pt too wide) in paragraph at lines 3--6
+\OT1/cmr/m/it/10 hun-
+ []
+
+
+Overfull \hbox (13.6721pt too wide) in paragraph at lines 3--6
+\OT1/cmr/m/it/10 gry
+ []
+
+
+Overfull \hbox (23.51097pt too wide) in paragraph at lines 3--6
+\OT1/cmr/m/it/10 again
+ []
+
+
+Overfull \hbox (8.68884pt too wide) in paragraph at lines 3--6
+\OT1/cmr/m/it/10 in
+ []
+
+
+Overfull \hbox (10.73328pt too wide) in paragraph at lines 3--6
+\OT1/cmr/m/it/10 an
+ []
+
+
+Overfull \hbox (22.87209pt too wide) in paragraph at lines 3--6
+\OT1/cmr/m/it/10 hour.
+ []
+
+
+Overfull \hbox (6.92218pt too wide) in paragraph at lines 3--6
+\OT1/cmr/m/it/10 If
+ []
+
+
+Overfull \hbox (15.33324pt too wide) in paragraph at lines 3--6
+\OT1/cmr/m/it/10 you
+ []
+
+
+Overfull \hbox (22.23315pt too wide) in paragraph at lines 3--6
+\OT1/cmr/m/it/10 teach
+ []
+
+
+Overfull \hbox (16.35547pt too wide) in paragraph at lines 3--6
+\OT1/cmr/m/it/10 him
+ []
+
+
+Overfull \hbox (8.43327pt too wide) in paragraph at lines 3--6
+\OT1/cmr/m/it/10 to
+ []
+
+
+Overfull \hbox (22.23315pt too wide) in paragraph at lines 3--6
+\OT1/cmr/m/it/10 catch
+ []
+
+
+Overfull \hbox (5.11108pt too wide) in paragraph at lines 3--6
+\OT1/cmr/m/it/10 a
+ []
+
+
+Overfull \hbox (14.82214pt too wide) in paragraph at lines 3--6
+\OT1/cmr/m/it/10 fish
+ []
+
+
+Overfull \hbox (15.33324pt too wide) in paragraph at lines 3--6
+\OT1/cmr/m/it/10 you
+ []
+
+
+Overfull \hbox (10.22217pt too wide) in paragraph at lines 3--6
+\OT1/cmr/m/it/10 do
+ []
+
+
+Overfull \hbox (16.35547pt too wide) in paragraph at lines 3--6
+\OT1/cmr/m/it/10 him
+ []
+
+
+Overfull \hbox (5.11108pt too wide) in paragraph at lines 3--6
+\OT1/cmr/m/it/10 a
+ []
+
+
+Overfull \hbox (18.91096pt too wide) in paragraph at lines 3--6
+\OT1/cmr/m/it/10 good
+ []
+
+
+Overfull \hbox (21.5943pt too wide) in paragraph at lines 3--6
+\OT1/cmr/m/it/10 turn.
+ []
+
+)
+! Emergency stop.
+<*> ./intro.tex
+               
+>>>>>>> Altunov
 *** (job aborted, no legal \end found)
 
  
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  5 strings out of 492616
  119 string characters out of 6129481
  57124 words of memory out of 5000000
@@ -20,4 +349,13 @@ Here is how much of TeX's memory you used:
  3640 words of font info for 14 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  5i,0n,1p,12b,8s stack positions out of 5000i,500n,10000p,200000b,80000s
+=======
+ 16 strings out of 492895
+ 192 string characters out of 3124202
+ 57610 words of memory out of 3000000
+ 4031 multiletter control sequences out of 15000+200000
+ 3986 words of font info for 15 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 12i,0n,10p,104b,57s stack positions out of 5000i,500n,10000p,200000b,50000s
+>>>>>>> Altunov
 !  ==> Fatal error occurred, no output PDF file produced!
