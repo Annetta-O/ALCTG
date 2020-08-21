@@ -1,3 +1,198 @@
+\mysubsection{Домашняя работа}
+
+\setcounter{example}{0}
 
 \begin{exercise}
+	$x, y, z$~---~целые числа, для которых истинно высказывание
+\begin{equation}
+		\neg(x=y)\wedge((y<x)\rightarrow(2z>x))\wedge((x<y)\rightarrow(x>2z))
+		\label{true_eq}
+\end{equation}
+	Чему равно $x$, если $z=7$, $y=16$?
 \end{exercise}
+
+\begin{solution}
+	Подставляем из условия значения $z$ и $y$ и преобразуем выражение \mref{true_eq}
+	$$
+		\neg(x=16)\wedge(\neg(x>16)\vee(x<14))\wedge(\neg(x<16)\vee(x>14)),
+	$$
+	$$
+		(x\neq16)\wedge((x\leqslant16)\vee(x<14))\wedge((x\geqslant16)\vee(x>14)).
+	$$
+	
+	Заметим, что итоговое выражение, как и изначальное, является конъюнкцией
+	трех выражений. Тогда оно истинно, если каждое из выражений должно быть
+	истинным. Это умозаключение приводит нас к трем условиям:
+\begin{enumerate}
+	\item $(x\neq16)=1$, если $x\neq16$;
+	\item $((x\leqslant16)\vee(x<14))=1$, если $x\leqslant16$;
+	\item $((x\geqslant16)\vee(x>14))=1$, если $x>14$.
+\end{enumerate}
+	
+	Пользуясь методом очень пристального взгляда, замечаем, что
+	все три условия выше можно переписать так
+	$$14<x<16,$$
+
+	\noindent откуда
+	$$x=15.$$
+\end{solution}
+
+\begin{answer}
+	$x=15$
+\end{answer}
+
+\newpage
+
+\begin{exercise}
+	Постройте таблицу истинности для функции
+\begin{equation}
+	f(x_1,x_2,x_3)=(x_1\vee x_2)\downarrow(x_2\rightarrow x_3)
+	\label{zero}
+\end{equation}
+\end{exercise}
+
+\begin{solution}
+
+\begin{paracol}{2}
+
+	Давайте преобразуем выражение \mref{zero}. 
+	Для этого представим $x_2\rightarrow x_3$ как 
+	$\neg x_2 \vee x_3$. Далее вспомним, что
+	$$x\downarrow y = \overline{x\vee y},$$
+	
+	\noindent откуда получаем, что
+	$$f = \neg(x_1\vee x_2 \vee \neg x_2 \vee x_3).$$
+
+	Видно, что под отрицанием стоит дизъюнкция,
+	которая на любых наборах будет равна единице,
+	поэтому $f$~---~тождественный ноль.
+
+\switchcolumn
+		
+\begin{center}
+ \begin{tabular}{| c c c | c |}
+  \hline	
+ $x_1$ & $x_2$ & $x_3$ & $f$ \T\B \\
+  \hline\hline
+  0 & 0 & 0 & 0 \T\B \\ 
+  0 & 0 & 1 & 0 \B \\
+  0 & 1 & 0 & 0 \B \\
+  0 & 1 & 1 & 0 \B \\
+  1 & 0 & 0 & 0 \B \\
+  1 & 0 & 1 & 0 \B \\
+  1 & 1 & 0 & 0 \B \\
+  1 & 1 & 1 & 0 \B \\
+  \hline
+ \end{tabular}
+ \vspace{1cm}
+ 
+ \
+ \small Таблица истинности функции $f$.
+\end{center}
+
+\end{paracol}
+\end{solution}
+
+\begin{exercise}
+Докажите, что 
+\begin{equation}
+		1\oplus x_1\oplus x_2=(x_1\rightarrow x_2)\wedge(x_2\rightarrow x_1)
+\end{equation}
+
+\end{exercise}
+
+\begin{solution}
+\begin{paracol}{2}
+ 
+ Пусть $f_1=1\oplus x_1\oplus x_2$, $f_2=(x1\rightarrow x_2)\wedge(x_2\rightarrow x_1)$ . \\
+
+ Видно, что векторы значений $f_1$ и $f_2$ совпадают, а значит, $f_1=f_2$(т.е. утверждение (1.3) ВЕРНО).
+
+ \switchcolumn
+ 
+\begin{center}
+ \begin{tabular}{| c c | c | c |}
+  \hline	
+ $ x_1$ & $x_2$ & $f_1$ & $f_2$ \T\B\\
+  \hline\hline
+  0 & 0 & 1 & 1\T\B \\
+  0 & 1 & 0 & 0 \B \\
+  1 & 0 & 0 & 0 \B \\
+  1 & 1 & 1 & 1 \B \\
+  \hline
+ \end{tabular}
+ \vspace{1 cm}
+ 
+ \
+ \small Таблица истинности функции $f_1$, $f_2$. 
+ 
+ 
+ \end{center}
+ \end{paracol}
+\end{solution}
+
+\begin{exercise}
+Докажите формулу
+\begin{equation}
+		\bigvee_{i,j;i\neq j} x_i\oplus x_j=(x_1\vee x_2\vee ...\vee x_n)\wedge(\neg x_1\vee \neg x_2\vee ...\vee \neg x_n)
+\end{equation}
+
+\end{exercise}
+
+\begin{solution}
+Рассмотрим 2 случая: \\
+\begin{enumerate}
+	\item $\bigvee_{i,j;i\neq j} x_i\oplus x_j=1$ $\Rightarrow$ есть как минимум одна пара разных значений($x_i=1$,$x_j=0$). Тогда\\
+$(x_1\vee x_2\vee ...\vee x_n)=1$,$\neg x_1\vee \neg x_2\vee ...\vee \neg x_n)=1$ $\Rightarrow$ $(x_1\vee x_2\vee ...\vee x_n)\wedge(\neg x_1\vee \neg x_2\vee ...\vee \neg x_n)=1$;
+	\item $\bigvee_{i,j;i\neq j} x_i\oplus x_j=1$ $\Rightarrow$ все $x_i$ и $x_j$ равны 0. Тогда в правой части либо $(x_1\vee x_2\vee ...\vee x_n)=0$, либо $(\neg x_1\vee \neg x_2\vee ...\vee \neg x_n)=0$, а значит и вся правая часть равна 0.
+\end{enumerate}
+Видно, что векторы значений левой и правой частей равенства совпадают, а значит, формула верна.
+
+\end{solution}
+
+
+
+\begin{exercise}
+Постройте таблицу истинности для f и выразите её через операции $\vee$,$\wedge$,$\neg$, если
+\begin{equation}
+		f=x_1\oplus x_2\oplus x_3\oplus x_1x_2\oplus x_1x_3\oplus x_2x_3\oplus 			x_1x_2x_3.
+\end{equation}
+
+\end{exercise}
+
+\begin{solution}
+\begin{paracol}{2}
+\noindent
+\begin{enumerate}
+	\item Функция $f$ принимает значение $0$ только при $x_1=x_2=x_3=0$.Во всех остальных случаях $f=1$;
+	\item  Перестроение с использованием $\vee, \wedge, \neg$:\\
+	$f_1=x_1\vee x_2\vee x_3$.\\
+	Видно, что функция  $f_1$ принимает значение $0$ только при $x_1=x_2=x_3=0$. А во всех остальных случаях $f_1=1$.
+\end{enumerate}
+\switchcolumn
+\begin{center}
+ \begin{tabular}{| c c c | c |}
+  \hline	
+ $ x_1$ & $x_2$ & $x_3$ & $f$ \T\B \\
+  \hline\hline
+  0 & 0 & 0 & 0\T\B \\
+  0 & 0 & 1 & 1 \B \\
+  0 & 1 & 0 & 1 \B \\
+  0 & 1 & 1 & 1 \B \\
+  1 & 0 & 0 & 1 \B \\
+  1 & 0 & 1 & 1 \B \\
+  1 & 1 & 0 & 1 \B \\
+  1 & 1 & 1 & 1 \B \\
+  \hline
+ \end{tabular}
+ \vspace{1 cm}
+ \
+ 
+ \small Таблица истинности функции $f$.
+ \end{center}
+\end{paracol}
+\end{solution}
+
+\begin{answer}
+$f_1=x_1\vee x_2\vee x_3$.
+\end{answer}
