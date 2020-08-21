@@ -24,13 +24,7 @@
 	
 	\input{chap_set}	
 	
-	\chapter{Основы математической логики и булева алгебра}
-		\section{Метод математической индукции}	
-%		\input{induction/theory}
-%		\input{induction/seminar}
-%		\input{induction/hw}
-%		\input{induction/minicw}
-	
+	\chapter{Основы математической логики и булева алгебра} 
 		\section{Булевы функции}
 %		\input{1/theory}
 %		\input{1/seminar}
